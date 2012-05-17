@@ -1,0 +1,68 @@
+This is a jQuery plugin providing 'loading image'.
+'wakeUp()' method starts drawing animation, and 'goToBed()' function ends it.
+
+All of shapes and property is followings;
+
+[Circle]
+type: type of shape / 'circle'
+color: color value / CSS compatible value
+size: canvas size / integer value
+speed: animation speed / millisecond
+clockwise: clockwise or not / true or false
+phase: phase to animate / integer value
+fade: time to fade in or fade out / millisecond
+fadeIn: fade in or not / true or false
+fadeOut: fade out or not / true or false
+
+
+[Dot/Line]
+type: type of shape / 'dot' or 'line'
+color: color value / CSS compatible value
+size: canvas size / integer value
+speed: animation speed / millisecond
+clockwise: clockwise or not / true or false
+item: number of items / integer value
+itemSize: size of each items / integer value
+fade: time to fade in or fade out / millisecond
+fadeIn: fade in or not / true or false
+fadeOut: fade out or not / true or false
+
+[Beat/Star/Heart]
+type: type of shape / 'beat' or 'star' or 'heart'
+color: color value / CSS compatible value
+size: canvas size / integer value
+speed: animation speed / millisecond
+phase: phase to animate / integer value
+fade: time to fade in or fade out / millisecond
+fadeIn: fade in or not / true or false
+fadeOut: fade out or not / true or false
+
+
+Like this;
+
+[html]
+<button id='line' class='btn'>Play/Stop</button>
+<div id='wake_line' class='wake'></div>
+
+[jQuery]
+$('#line').click(function() {
+	if ($('#wake_line').find('canvas').get(0)) {
+		$('#wake_line').goToBed();
+	} else {
+		var option = {
+			type: 'line',
+			color: 'rgb(0, 255, 0)',
+			size: 50,
+			speed: 30,
+			clockwise: false,
+			item: 24,
+			itemSize: 12
+		};
+		$('#wake_line').wakeUp(option);
+	}
+});
+
+Thank you.
+
+/* Special Thanks */
+@astronaughts https://twitter.com/#!/astronaughts

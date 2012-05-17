@@ -1,0 +1,166 @@
+<!DOCTYPE HTML> 
+<html lang='ja'> 
+<head> 
+	<meta charset='UTF-8'> 
+	<title>jquery.wakeup.js</title>
+	<script type='text/javascript' src='http://code.jquery.com/jquery-latest.js'></script>
+	<script type='text/javascript' src='jquery.wakeup.js'></script>
+	<script type='text/javascript'>
+		$(function() {
+			$('#circle').click(function() {
+				if ($('#wake_circle').find('canvas').get(0)) {
+					$('#wake_circle').goToBed();
+				} else {
+					var option = {
+						type: 'circle',
+						color: 'rgb(0, 102, 255)',
+						size: 50,
+						fade: 1000,
+						clockwise: false
+					};
+					$('#wake_circle').wakeUp(option);
+				}
+			});
+			$('#dot').click(function() {
+				if ($('#wake_dot').find('canvas').get(0)) {
+					$('#wake_dot').goToBed();
+				} else {
+					var option = {
+						type: 'dot',
+						color: 'rgb(255, 0, 0)',
+						size: 50,
+						speed: 30,
+						item: 20,
+						itemSize: 1
+					};
+					$('#wake_dot').wakeUp(option);
+				}
+			});
+			$('#line').click(function() {
+				if ($('#wake_line').find('canvas').get(0)) {
+					$('#wake_line').goToBed();
+				} else {
+					var option = {
+						type: 'line',
+						color: 'rgb(0, 255, 0)',
+						size: 50,
+						speed: 30,
+						clockwise: false,
+						item: 24,
+						itemSize: 12
+					};
+					$('#wake_line').wakeUp(option);
+				}
+			});
+			$('#beat').click(function() {
+				if ($('#wake_beat').find('canvas').get(0)) {
+					$('#wake_beat').goToBed();
+				} else {
+					var option = {
+						type: 'beat',
+						color: 'rgb(255, 255, 0)',
+						size: 30,
+						speed: 30
+					};
+					$('#wake_beat').wakeUp(option);
+				}
+			});
+			$('#star').click(function() {
+				if ($('#wake_star').find('canvas').get(0)) {
+					$('#wake_star').goToBed();
+				} else {
+					var option = {
+						type: 'star',
+						color: 'rgb(255, 255, 255)',
+						size: 30,
+						speed: 30
+					};
+					$('#wake_star').wakeUp(option);
+				}
+			});
+			$('#heart').click(function() {
+				if ($('#wake_heart').find('canvas').get(0)) {
+					$('#wake_heart').goToBed();
+				} else {
+					var option = {
+						type: 'heart',
+						color: 'rgb(255, 0, 255)',
+						size: 30,
+						speed: 50
+					};
+					$('#wake_heart').wakeUp(option);
+				}
+			});
+		});
+	</script>
+	<style type='text/css'>
+		body {
+			color: rgb(255, 255, 255);
+			background: rgb(0, 0, 0);
+		}
+		.clear:after {
+		    content: "."; 
+		    display: block; 
+		    height: 0; 
+		    clear: both; 
+		    visibility: hidden;
+		}
+		.box {
+			margin: 5px 10px;
+			float: left;
+		}
+		strong {
+			margin: 0px 0px 5px;
+			padding: 0px 0px 5px;
+			display: block;
+			border-bottom: 1px solid rgb(180, 180, 180);
+		}
+		.wake {
+			width: 50px;
+			height: 50px;
+			margin: 5px 0px 0px;
+			padding: 25px;
+			border: 1px solid rgb(180, 180, 180);
+		}
+		#wake_beat.wake, #wake_star.wake, #wake_heart.wake {
+			width: 30px;
+			height: 30px;
+			padding: 35px;
+		}
+	</style>
+</head> 
+<body>
+	<div class='clear'>
+		<div class='box'>
+			<strong>Circle</strong>
+			<button id='circle' class='btn'>Play/Stop</button>
+			<div id='wake_circle' class='wake'></div>
+		</div>
+		<div class='box'>
+			<strong>Dot</strong>
+			<button id='dot' class='btn'>Play/Stop</button>
+			<div id='wake_dot' class='wake'></div>
+		</div>
+		<div class='box'>
+			<strong>Line</strong>
+			<button id='line' class='btn'>Play/Stop</button>
+			<div id='wake_line' class='wake'></div>
+		</div>
+		<div class='box'>
+			<strong>Beat</strong>
+			<button id='beat' class='btn'>Play/Stop</button>
+			<div id='wake_beat' class='wake'></div>
+		</div>
+		<div class='box'>
+			<strong>Star</strong>
+			<button id='star' class='btn'>Play/Stop</button>
+			<div id='wake_star' class='wake'></div>
+		</div>
+		<div class='box'>
+			<strong>Heart</strong>
+			<button id='heart' class='btn'>Play/Stop</button>
+			<div id='wake_heart' class='wake'></div>
+		</div>
+	</div>
+</body> 
+</html>
