@@ -9,7 +9,6 @@ color: color value / CSS compatible value
 size: canvas size / integer value
 speed: animation speed / millisecond
 clockwise: clockwise or not / true or false
-phase: phase to animate / integer value
 fade: time to fade in or fade out / millisecond
 fadeIn: fade in or not / true or false
 fadeOut: fade out or not / true or false
