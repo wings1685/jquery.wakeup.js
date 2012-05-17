@@ -40,8 +40,8 @@ fadeOut: fade out or not / true or false
 Like this;
 
 [html]
-<button id='line' class='btn'>Play/Stop</button>
-<div id='wake_line' class='wake'></div>
+<button id='line'>Play/Stop</button>
+<div id='wake_line'></div>
 
 [jQuery]
 $('#line').click(function() {
