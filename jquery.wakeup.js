@@ -35,6 +35,7 @@ $.fn.extend({
 		$(this).find('canvas').fadeIn($.awake[id].fade);
 		if ($.awake[id].fadeIn) $(this).find('canvas').css('display', 'none').fadeIn($.awake[id].fade);
 		this['wakeUp_' + $.awake[id].type](id);
+		return this;
 	},
 	getColor: function(color) {
 		if (color.indexOf('rgb') != -1 || color.indexOf('hsl') != -1) {
@@ -184,6 +185,7 @@ $.fn.extend({
 		if ($.awake[id].end) {
 			$('#' + $.awake[id].id).find('canvas').remove();
 			delete $.awake[id];
+			return this;
 		} else {
 			window.setTimeout(function() {$()['wakeUp_' + $.awake[id].type](id)}, $.awake[id].speed);
 		}
@@ -198,5 +200,6 @@ $.fn.extend({
 		} else {
 			$.awake[id].end = true;
 		}
+		return this;
 	}
 });
