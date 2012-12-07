@@ -3,7 +3,7 @@
 // website: http://www.primedesignworks.com/
 /* -------------------------------------------------------------------------------------------- */
 
-$.extend({awake: new Object()});
+$.extend({awake: {}});
 $.fn.extend({
 	wakeUp: function(option) {
 		var defaults = {
@@ -20,13 +20,13 @@ $.fn.extend({
 			fadeOut: true
 		};
 		var id = $(this).attr('id');
-		$.awake[id] = new Object();
+		$.awake[id] = {};
 		$.awake[id] = $.extend(defaults, option);
 		$.awake[id].id = id;
 		$.awake[id].color = this.getColor($.awake[id].color);
 
 		$(this).append('<canvas></canvas>');
-		$.awake[id].e = $(this).find('canvas').get(0);
+		$.awake[id].e = $(this).find('canvas')[0];
 		$.awake[id].c = $.awake[id].e.getContext('2d');
 		$.awake[id].e.width = $.awake[id].size;
 		$.awake[id].e.height = $.awake[id].size;
