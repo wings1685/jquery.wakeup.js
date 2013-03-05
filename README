@@ -1,43 +1,45 @@
-This is a jQuery plugin providing 'loading image'.
-'wakeUp()' method starts drawing animation, and 'goToBed()' function ends it.
+これはローディングアニメーションを生成する jQuery プラグインです。
+wakeUp() でアニメーション生成、goToBed() で破棄します。
+Canvas で描かれるので、Canvas 対応ブラウザ（非対応の場合は対応処理を施した上）でお使いください。
 
-All of shapes and property is followings;
+
+全ての形とプロパティは以下の通りです。
 
 [circle]
-type: type of shape / 'circle'
-color: color value / CSS compatible value
-size: canvas size / integer value
-speed: animation speed / millisecond
-clockwise: clockwise or not / true or false
-fade: time to fade in or fade out / millisecond
-fadeIn: fade in or not / true or false
-fadeOut: fade out or not / true or false
+type: アニメーションの形 / 'circle'
+color: アニメーションの色 / CSS での値
+size: アニメーションの大きさ / 数値
+speed: アニメーションの速さ / ミリ秒
+clockwise: 時計回りかどうか / true もしくは false
+fade: フェイドインやフェイドアウトの時間 / ミリ秒
+fadeIn: フェイドインするかどうか / true もしくは false
+fadeOut: フェイドアウトするかどうか / true もしくは false
 
 
 [dot/line]
-type: type of shape / 'dot' or 'line'
-color: color value / CSS compatible value
-size: canvas size / integer value
-speed: animation speed / millisecond
-clockwise: clockwise or not / true or false
-item: number of items / integer value
-itemSize: size of each items / integer value
-fade: time to fade in or fade out / millisecond
-fadeIn: fade in or not / true or false
-fadeOut: fade out or not / true or false
+type: アニメーションの形 / 'dot' もしくは 'line'
+color: アニメーションの色 / CSS での値
+size: アニメーションの大きさ / 数値
+speed: アニメーションの速さ / ミリ秒
+clockwise: 時計回りかどうか / true もしくは false
+item: アニメーションする物体の数 / 数値
+itemSize: アニメーションする物体の大きさ / 数値
+fade: フェイドインやフェイドアウトの時間 / ミリ秒
+fadeIn: フェイドインするかどうか / true もしくは false
+fadeOut: フェイドアウトするかどうか / true もしくは false
 
 [beat/star/heart]
-type: type of shape / 'beat' or 'star' or 'heart'
-color: color value / CSS compatible value
-size: canvas size / integer value
-speed: animation speed / millisecond
-phase: phase to animate / integer value
-fade: time to fade in or fade out / millisecond
-fadeIn: fade in or not / true or false
-fadeOut: fade out or not / true or false
+type: アニメーションの形 / 'beat' もしくは 'star' もしくは 'heart'
+color: アニメーションの色 / CSS での値
+size: アニメーションの大きさ / 数値
+speed: アニメーションの速さ / ミリ秒
+phase: アニメーションする段階 / 数値
+fade: フェイドインやフェイドアウトの時間 / millisecond
+fadeIn: フェイドインするかどうか / true or false
+fadeOut: フェイドアウトするかどうか / true or false
 
 
-Here's a specific example;
+例をここに記します。
 
 [html]
 <button>Play/Stop</button>
@@ -62,7 +64,7 @@ $('button').click(function() {
 });
 
 
-Thank you.
+このプラグインがお役に立てれば幸いです。
 
 /* Special Thanks */
 @astronaughts https://twitter.com/#!/astronaughts
