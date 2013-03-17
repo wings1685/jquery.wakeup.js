@@ -1,7 +1,10 @@
-/* -------------------------------------------------------------------------------------------- */
-// copyright: Prime Design Works
-// website: http://www.primedesignworks.com/
-/* -------------------------------------------------------------------------------------------- */
+/**
+ * jQuery Wake Up v1.0.4
+ * http://flugel.biz/
+ *
+ * Licensed under the MIT license.
+ * Copyright 2012 Yutaka Imagawa
+ */
 
 $.extend({awake: {}});
 $.fn.extend({
