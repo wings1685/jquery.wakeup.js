@@ -57,7 +57,7 @@ $.fn.extend({
 		var h = Math.round($.awake[id].size * 0.25);
 		var rotate = ($.awake[id].clockwise) ? 360 / $.awake[id].item: -(360 / $.awake[id].item);
 
-		for (var i = 0; i < $.awake[id].item; i++) {
+		for (var i = 0, l = $.awake[id].item; i < l; i++) {
 			if ($.awake[id].alphas.length < $.awake[id].item) $.awake[id].alphas.push(i / ($.awake[id].item - 1));
 			$.awake[id].c.fillStyle = $.awake[id].color;
 			$.awake[id].c.globalAlpha = $.awake[id].alphas[i];
@@ -79,7 +79,7 @@ $.fn.extend({
 		var r = $().wakeUp_set(id, 'size');
 		var rotate = ($.awake[id].clockwise) ? 360 / $.awake[id].item: -(360 / $.awake[id].item);
 
-		for (var i = 0; i < $.awake[id].item; i++) {
+		for (var i = 0, l = $.awake[id].item; i < l; i++) {
 			if ($.awake[id].alphas.length < $.awake[id].item) $.awake[id].alphas.push(i / ($.awake[id].item - 1));
 			$.awake[id].c.beginPath();
 			$.awake[id].c.arc(0, 0 - r + $.awake[id].itemSize, $.awake[id].itemSize, 0, 2 * Math.PI, false)
@@ -95,7 +95,7 @@ $.fn.extend({
 		var r = $().wakeUp_set(id, 'size');
 		var rotate = ($.awake[id].clockwise) ? 360 / $.awake[id].item: -(360 / $.awake[id].item);
 
-		for (var i = 0; i < $.awake[id].item; i++) {
+		for (var i = 0, l = $.awake[id].item; i < l; i++) {
 			if ($.awake[id].alphas.length < $.awake[id].item) $.awake[id].alphas.push(i / ($.awake[id].item - 1));
 			$.awake[id].c.beginPath();
 			$.awake[id].c.moveTo(0, 0 - r);
