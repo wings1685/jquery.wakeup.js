@@ -61,7 +61,7 @@ Canvas で描かれるので、Canvas 対応ブラウザ（非対応の場合は
 	});
 
 
-このプラグインがお役に立てれば幸いです。
+このプラグインがお役に立てば幸いです。
 
 ## Special Thanks
 @astronaughts https://twitter.com//astronaughts
